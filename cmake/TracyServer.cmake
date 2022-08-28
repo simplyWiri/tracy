@@ -1,0 +1,138 @@
+add_library(TracyServer STATIC)
+add_library(Tracy::TracyServer ALIAS TracyServer)
+
+target_sources(TracyServer
+    PRIVATE
+        ${TRACY_DIR}/server/IconsFontAwesome6.h
+        ${TRACY_DIR}/server/TracyBadVersion.cpp
+        ${TRACY_DIR}/server/TracyBadVersion.hpp
+        ${TRACY_DIR}/server/TracyBuzzAnim.hpp
+        ${TRACY_DIR}/server/TracyCharUtil.hpp
+        ${TRACY_DIR}/server/TracyColor.cpp
+        ${TRACY_DIR}/server/TracyColor.hpp
+        ${TRACY_DIR}/server/TracyDecayValue.hpp
+        ${TRACY_DIR}/server/TracyEventDebug.cpp
+        ${TRACY_DIR}/server/TracyEventDebug.hpp
+        ${TRACY_DIR}/server/TracyEvent.hpp
+        ${TRACY_DIR}/server/TracyFileHeader.hpp
+        ${TRACY_DIR}/server/TracyFileRead.hpp
+        ${TRACY_DIR}/server/TracyFileselector.cpp
+        ${TRACY_DIR}/server/TracyFileselector.hpp
+        ${TRACY_DIR}/server/TracyFilesystem.cpp
+        ${TRACY_DIR}/server/TracyFilesystem.hpp
+        ${TRACY_DIR}/server/TracyFileWrite.hpp
+        ${TRACY_DIR}/server/TracyImGui.cpp
+        ${TRACY_DIR}/server/TracyImGui.hpp
+        ${TRACY_DIR}/server/TracyMemory.cpp
+        ${TRACY_DIR}/server/TracyMemory.hpp
+        ${TRACY_DIR}/server/TracyMicroArchitecture.cpp
+        ${TRACY_DIR}/server/TracyMicroArchitecture.hpp
+        ${TRACY_DIR}/server/TracyMmap.cpp
+        ${TRACY_DIR}/server/TracyMmap.hpp
+        ${TRACY_DIR}/server/TracyMouse.cpp
+        ${TRACY_DIR}/server/TracyMouse.hpp
+        ${TRACY_DIR}/server/tracy_pdqsort.h
+        ${TRACY_DIR}/server/TracyPopcnt.hpp
+        ${TRACY_DIR}/server/TracyPrint.cpp
+        ${TRACY_DIR}/server/TracyPrint.hpp
+        ${TRACY_DIR}/server/TracyProtoHistory.cpp
+        ${TRACY_DIR}/server/TracyProtoHistory.hpp
+        ${TRACY_DIR}/server/tracy_robin_hood.h
+        ${TRACY_DIR}/server/TracyShortPtr.hpp
+        ${TRACY_DIR}/server/TracySlab.hpp
+        ${TRACY_DIR}/server/TracySortedVector.hpp
+        ${TRACY_DIR}/server/TracySort.hpp
+        ${TRACY_DIR}/server/TracySourceContents.cpp
+        ${TRACY_DIR}/server/TracySourceContents.hpp
+        ${TRACY_DIR}/server/TracySourceTokenizer.cpp
+        ${TRACY_DIR}/server/TracySourceTokenizer.hpp
+        ${TRACY_DIR}/server/TracySourceView.cpp
+        ${TRACY_DIR}/server/TracySourceView.hpp
+        ${TRACY_DIR}/server/TracyStorage.cpp
+        ${TRACY_DIR}/server/TracyStorage.hpp
+        ${TRACY_DIR}/server/TracyStringDiscovery.hpp
+        ${TRACY_DIR}/server/TracyTaskDispatch.cpp
+        ${TRACY_DIR}/server/TracyTaskDispatch.hpp
+        ${TRACY_DIR}/server/TracyTextureCompression.cpp
+        ${TRACY_DIR}/server/TracyTextureCompression.hpp
+        ${TRACY_DIR}/server/TracyTexture.cpp
+        ${TRACY_DIR}/server/TracyTexture.hpp
+        ${TRACY_DIR}/server/TracyThreadCompress.cpp
+        ${TRACY_DIR}/server/TracyThreadCompress.hpp
+        ${TRACY_DIR}/server/TracyTimelineContext.hpp
+        ${TRACY_DIR}/server/TracyTimelineController.cpp
+        ${TRACY_DIR}/server/TracyTimelineController.hpp
+        ${TRACY_DIR}/server/TracyTimelineDraw.hpp
+        ${TRACY_DIR}/server/TracyTimelineItem.cpp
+        ${TRACY_DIR}/server/TracyTimelineItemCpuData.cpp
+        ${TRACY_DIR}/server/TracyTimelineItemCpuData.hpp
+        ${TRACY_DIR}/server/TracyTimelineItemGpu.cpp
+        ${TRACY_DIR}/server/TracyTimelineItemGpu.hpp
+        ${TRACY_DIR}/server/TracyTimelineItem.hpp
+        ${TRACY_DIR}/server/TracyTimelineItemPlot.cpp
+        ${TRACY_DIR}/server/TracyTimelineItemPlot.hpp
+        ${TRACY_DIR}/server/TracyTimelineItemThread.cpp
+        ${TRACY_DIR}/server/TracyTimelineItemThread.hpp
+        ${TRACY_DIR}/server/TracyUserData.cpp
+        ${TRACY_DIR}/server/TracyUserData.hpp
+        ${TRACY_DIR}/server/TracyUtility.cpp
+        ${TRACY_DIR}/server/TracyUtility.hpp
+        ${TRACY_DIR}/server/TracyVarArray.hpp
+        ${TRACY_DIR}/server/TracyVector.hpp
+        ${TRACY_DIR}/server/TracyView_Annotations.cpp
+        ${TRACY_DIR}/server/TracyView_Callstack.cpp
+        ${TRACY_DIR}/server/TracyView_Compare.cpp
+        ${TRACY_DIR}/server/TracyView_ConnectionState.cpp
+        ${TRACY_DIR}/server/TracyView_ContextSwitch.cpp
+        ${TRACY_DIR}/server/TracyView.cpp
+        ${TRACY_DIR}/server/TracyView_CpuData.cpp
+        ${TRACY_DIR}/server/TracyViewData.hpp
+        ${TRACY_DIR}/server/TracyView_FindZone.cpp
+        ${TRACY_DIR}/server/TracyView_FrameOverview.cpp
+        ${TRACY_DIR}/server/TracyView_FrameTimeline.cpp
+        ${TRACY_DIR}/server/TracyView_FrameTree.cpp
+        ${TRACY_DIR}/server/TracyView_GpuTimeline.cpp
+        ${TRACY_DIR}/server/TracyView.hpp
+        ${TRACY_DIR}/server/TracyView_Locks.cpp
+        ${TRACY_DIR}/server/TracyView_Memory.cpp
+        ${TRACY_DIR}/server/TracyView_Messages.cpp
+        ${TRACY_DIR}/server/TracyView_Navigation.cpp
+        ${TRACY_DIR}/server/TracyView_NotificationArea.cpp
+        ${TRACY_DIR}/server/TracyView_Options.cpp
+        ${TRACY_DIR}/server/TracyView_Playback.cpp
+        ${TRACY_DIR}/server/TracyView_Plots.cpp
+        ${TRACY_DIR}/server/TracyView_Ranges.cpp
+        ${TRACY_DIR}/server/TracyView_Samples.cpp
+        ${TRACY_DIR}/server/TracyView_Statistics.cpp
+        ${TRACY_DIR}/server/TracyView_Timeline.cpp
+        ${TRACY_DIR}/server/TracyView_TraceInfo.cpp
+        ${TRACY_DIR}/server/TracyView_Utility.cpp
+        ${TRACY_DIR}/server/TracyView_ZoneInfo.cpp
+        ${TRACY_DIR}/server/TracyView_ZoneTimeline.cpp
+        ${TRACY_DIR}/server/TracyWeb.cpp
+        ${TRACY_DIR}/server/TracyWeb.hpp
+        ${TRACY_DIR}/server/TracyWorker.cpp
+        ${TRACY_DIR}/server/TracyWorker.hpp
+        ${TRACY_DIR}/server/tracy_xxhash.h
+)
+target_include_directories(TracyServer
+    PUBLIC
+        ${TRACY_DIR}/server
+)
+
+target_link_libraries(TracyServer
+    PUBLIC
+        TracyCommon
+        TracyImGui
+        TracyZSTD
+        TracyNFD
+        PkgConfig::zlib
+    PRIVATE
+        PkgConfig::capstone
+)
+set_target_properties(TracyServer
+    PROPERTIES
+        CXX_STANDARD          17
+        CXX_STANDARD_REQUIRED ON
+        CXX_EXTENSIONS        OFF
+)
