@@ -242,7 +242,6 @@ void View::DrawZoneList( int id, const Vector<short_ptr<ZoneEvent>>& zones )
         }
     }
     ImGui::EndTable();
-    ImGui::TreePop();
 }
 
 void View::DrawFindZone()
@@ -1671,6 +1670,7 @@ void View::DrawFindZone()
                 if( ImGui::TreeNodeEx( "Zone list" ) )
                 {
                     DrawZoneList( group->second.id, group->second.zones );
+                    ImGui::TreePop();
                 }
             }
         }
@@ -1762,6 +1762,7 @@ void View::DrawFindZone()
                 if( expand )
                 {
                     DrawZoneList( v->second.id, v->second.zones );
+                    ImGui::TreePop();
                 }
             }
         }
